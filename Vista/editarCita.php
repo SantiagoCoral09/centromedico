@@ -37,7 +37,7 @@ $cita=$citas->fetch_object();
             class="form-control form-control-user col-sm-5" disabled>
         </div>
         <div class="form-group">
-          <label class="col-sm-4 control-label">Observaciones</label>
+          <label class="col-sm-4 control-label">Observaciones...</label>
           <textarea type="text" name="observaciones" id="observaciones" class="form-control col-sm-5" placeholder="Escriba sus Observaciones" required> </textarea>					
 				
         </div>
