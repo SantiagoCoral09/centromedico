@@ -24,7 +24,7 @@ $cita=$citas->fetch_object();
   <!-- Agregar Usuario -->
   <div class="container">
     <div class="text-center">
-      <h1 class="h4 text-gray-900 mb-4">Información de la cita Registrada</h1>
+      <h1 class="h4 text-gray-900 mb-4">Información de la Cita Registrada</h1>
     </div>
     <div class="form-horizontal">
 
