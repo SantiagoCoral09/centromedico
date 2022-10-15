@@ -1,4 +1,4 @@
-<!-- El medico podrá ver informacion de otros medicos, pacientes y citas, no puede ingresar usuario ni otros medicos, tampoco eliminar -->
+<!-- Auxiliar es quien ayuda al administrador en algunas acciones como consultar registrar o modificar, pero nno podra eliminar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
@@ -22,11 +22,12 @@
     <!-- Divider -->
     <hr class="sidebar-divider">
 
+    <!-- Heading -->
     <div class="sidebar-heading">
-        Médicos y Pacientes
+        Gestión de Usuarios
     </div>
 
-    <!-- Nav Item - Pages Collapse Menu 
+    <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
             aria-controls="collapseTwo">
@@ -40,10 +41,10 @@
                 <a class="collapse-item" href="/centromedico/Vista/actualizarUsuario.php">Editar Usuario</a>
                 <a class="collapse-item" href="/centromedico/Vista/consultarUsuario.php">Consultar un Usuario</a>
                 <a class="collapse-item" href="/centromedico/Vista/listarUsuarios.php">Listar Usuarios</a>
-                <a class="collapse-item" href="/centromedico/Vista/eliminarUsuario.php">Eliminar Usuario</a>
+                <!-- <a class="collapse-item" href="/centromedico/Vista/eliminarUsuario.php">Eliminar Usuario</a> -->
             </div>
         </div>
-    </li>-->
+    </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
@@ -55,8 +56,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Acciones:</h6>
-                <!-- <a class="collapse-item" href="/centromedico/Vista/agregarMedico.php">Agregar Médico</a> -->
-                <!-- <a class="collapse-item" href="/centromedico/Vista/actualizarMedico.php">Editar Médico</a> -->
+                <a class="collapse-item" href="/centromedico/Vista/agregarMedico.php">Agregar Médico</a>
+                <a class="collapse-item" href="/centromedico/Vista/actualizarMedico.php">Editar Médico</a>
                 <a class="collapse-item" href="/centromedico/Vista/consultarMedico.php">Consultar un Médico</a>
                 <a class="collapse-item" href="/centromedico/Vista/listarMedicos.php">Listar Médicos</a>
                 <!-- <a class="collapse-item" href="/centromedico/Vista/eliminarMedico.php">Eliminar Médico</a> -->
@@ -74,8 +75,8 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Acciones:</h6>
-                <!-- <a class="collapse-item" href="/centromedico/Vista/agregarPaciente.php">Agregar Paciente</a> -->
-                <!-- <a class="collapse-item" href="/centromedico/Vista/actualizarPaciente.php">Editar Paciente</a> -->
+                <a class="collapse-item" href="/centromedico/Vista/agregarPaciente.php">Agregar Paciente</a>
+                <a class="collapse-item" href="/centromedico/Vista/actualizarPaciente.php">Editar Paciente</a>
                 <a class="collapse-item" href="/centromedico/Vista/consultarPaciente.php">Consultar un Paciente</a>
                 <a class="collapse-item" href="/centromedico/Vista/listarPacientes.php">Listar Pacientes</a>
                 <!-- <a class="collapse-item" href="/centromedico/Vista/eliminarPaciente.php">Eliminar Paciente</a> -->

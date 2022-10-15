@@ -22,7 +22,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" >
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -33,6 +33,10 @@
             include "menuAdmin.php";
         } elseif ($_SESSION['rol']=='Medico') {
             include "menuMedico.php";
+        }elseif ($_SESSION['rol']=='Auxiliar') {
+            include "menuAuxiliar";
+        }elseif ($_SESSION['rol']=='Paciente') {
+            include "menuPaciente";
         }
         ?>
         </div>
@@ -54,7 +58,7 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-
+                        <h4 class="text-center text-primary">Centro Médico <br> Especializado del Norte</h4>
 
 
                         <div class="topbar-divider d-none d-sm-block"></div>

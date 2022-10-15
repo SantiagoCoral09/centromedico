@@ -7,9 +7,9 @@ if (!isset($_SESSION['user']))
 
 ?>
                 <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+<body background="img/fondo.webp">
+  <!-- Begin Page Content -->
+                <div class="container">
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
@@ -17,14 +17,13 @@ if (!isset($_SESSION['user']))
                         <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
-                    ---------------------------------------------------------------------------------------
-                    Contenido principal
-                    ----------------------------------------------------------------------------------
-
+                    
 
 
                 </div>
                 <!-- /.container-fluid -->
+</body>
+                
 
             
 

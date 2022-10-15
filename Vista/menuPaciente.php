@@ -1,4 +1,4 @@
-<!-- El medico podrá ver informacion de otros medicos, pacientes y citas, no puede ingresar usuario ni otros medicos, tampoco eliminar -->
+<!-- El paciente solo podrá ver informacion de los medicos -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
@@ -21,12 +21,12 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider">
-
+<!--
     <div class="sidebar-heading">
-        Médicos y Pacientes
+        Gestión de Usuarios
     </div>
 
-    <!-- Nav Item - Pages Collapse Menu 
+     Nav Item - Pages Collapse Menu 
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
             aria-controls="collapseTwo">
@@ -63,7 +63,7 @@
             </div>
         </div>
     </li>
-    <!-- Nav Item - Utilities Collapse Menu -->
+    <!-- Nav Item - Utilities Collapse Menu 
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities2"
             aria-expanded="true" aria-controls="collapseUtilities2">
@@ -74,24 +74,23 @@
             data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Acciones:</h6>
-                <!-- <a class="collapse-item" href="/centromedico/Vista/agregarPaciente.php">Agregar Paciente</a> -->
-                <!-- <a class="collapse-item" href="/centromedico/Vista/actualizarPaciente.php">Editar Paciente</a> -->
+                <a class="collapse-item" href="/centromedico/Vista/agregarPaciente.php">Agregar Paciente</a>
+                <a class="collapse-item" href="/centromedico/Vista/actualizarPaciente.php">Editar Paciente</a>
                 <a class="collapse-item" href="/centromedico/Vista/consultarPaciente.php">Consultar un Paciente</a>
                 <a class="collapse-item" href="/centromedico/Vista/listarPacientes.php">Listar Pacientes</a>
-                <!-- <a class="collapse-item" href="/centromedico/Vista/eliminarPaciente.php">Eliminar Paciente</a> -->
+                <a class="collapse-item" href="/centromedico/Vista/eliminarPaciente.php">Eliminar Paciente</a>
             </div>
         </div>
-    </li>
+    </li>-->
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <!-- Heading -->
+    <!-- Heading 
     <div class="sidebar-heading">
         Gestión de Citas
     </div>
 
-    <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true"
             aria-controls="collapsePages">
@@ -106,7 +105,7 @@
                 <a class="collapse-item" href="/centromedico/Vista/listarCitas.php">Listar Citas Atendidas</a>
             </div>
         </div>
-    </li>
+    </li>-->
     <!-- Nav Item - Tables 
         //////Estos listados ya estan en cada menu de arriba
     <li class="nav-item">
