@@ -20,82 +20,98 @@ $resultado=$objUsuario->ConsultarIdUsuario($_REQUEST['idUsuario']);
      include './encabezado.php';
 
 ?>
-                <!-- End of Topbar -->
+<!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
+    <!-- Agregar Usuario -->
+    <div class="card shadow"
+        style="border-radius: 20px; max-height: 420px; overflow: scroll; margin: 20px 10px 10px 10px;">
 
-                    <!-- Agregar Usuario -->
-                    <div class="container">
-                        <div class="text-center">
-                            <h1 class="h4 text-gray-900 mb-4">Información del Usuario Registrado</h1>
+        <div class="card-header bg-gradient-primary">
+            <div class="text-center">
+                <h1 class="h4 text-light mb-4">Información del Usuario Registrado</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="card-body">
+                <div class="form-horizontal">
+
+                    <form class="user" id="form1" name="form1"
+                        action="/centromedico/Controlador/validarActualizarUsuario.php?idUsuario=<?php echo $registro->idUsuario?>"
+                        method="POST">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Usuario</label>
+                            <input name="usuario" type="text" id="usuario" placeholder="Digite el nombre del usuario"
+                                class="form-control form-control-user col-sm-5" value="<?php echo $registro->usuLogin?>"
+                                required>
                         </div>
-                        <div class="form-horizontal">
-                            
-                            <form class="user" id="form1" name="form1"
-                            action="/centromedico/Controlador/validarActualizarUsuario.php?idUsuario=<?php echo $registro->idUsuario?>" method="POST">
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Password</label>
+                            <input name="password" type="password" id="password" placeholder="Digite la contraseña"
+                                class="form-control form-control-user col-sm-5"
+                                value="<?php echo $registro->usuPassword?>" required>
+                        </div>
 
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Usuario</label>
-                                    <input name="usuario" type="text" id="usuario"
-                                        placeholder="Digite el nombre del usuario" class="form-control form-control-user col-sm-5" value="<?php echo $registro->usuLogin?>"
-                                        required>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label">Estado</label>
+                            <select class="col-sm-5 form-control input-lg " name="estado">
+                                <option value="" class="col-sm-4 control-label text-left"> </option>
+                                <option value="Activo" <?php if($registro->usuEstado=='Activo') echo 'selected';
+                                    ?>>Activo
+                                </option>
+                                <option value="Inactivo" <?php if($registro->usuEstado=='Inactivo') echo 'selected';
+                                    ?>>Inactivo
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label"> Rol del sistema </label>
+                            <select class="col-sm-5 form-control input-lg " name="rol">
+                                <option class="col-sm-4 control-label text-left" value=""></option>
+                                <option value="Administrador" <?php if($registro->usuRol=='Administrador') echo
+                                    'selected';
+                                    ?>>Administrador</option>
+                                <option value="Medico" <?php if($registro->usuRol=='Medico') echo 'selected'; ?>>Medico
+                                </option>
+                                <option value="Paciente" <?php if($registro->usuRol=='Paciente') echo 'selected';
+                                    ?>>Paciente
+                                </option>
+                                <option value="Auxiliar" <?php if($registro->usuRol=='Auxiliar') echo 'selected';
+                                    ?>>Auxiliar
+                                </option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <div class="form-group">
+                                <label class="col-sm-4 control-label"></label>
+                                <div class="col-sm-5">
+                                    <button type="submit" class="btn btn-primary btn-user btn-block">
+                                        Actualizar</button>
                                 </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label" >Password</label>
-                                     <input name="password" type="password" id="password" placeholder="Digite la contraseña" class="form-control form-control-user col-sm-5" value="<?php echo $registro->usuPassword?>" required>
-                                  </div>
-                                 
-                                  <div class="form-group">    
-                                        <label class="col-sm-4 control-label">Estado</label>             
-                                        <select class="col-sm-5 form-control input-lg " name="estado">   
-                                            <option value="" class="col-sm-4 control-label text-left"> </option>
-                                            <option value="Activo"<?php if($registro->usuEstado=='Activo') echo 'selected'; ?>>Activo</option>
-                                            <option value="Inactivo"<?php if($registro->usuEstado=='Inactivo') echo 'selected'; ?>>Inactivo</option>
-                                        </select>              
-                                  </div>  
-                                 
-                                  <div class="form-group">    
-                                        <label class="col-sm-4 control-label" > Rol del sistema  </label>             
-                                        <select class="col-sm-5 form-control input-lg " name="rol">    
-                                            <option class="col-sm-4 control-label text-left" value=""></option>
-                                            <option value="Administrador"<?php if($registro->usuRol=='Administrador') echo 'selected'; ?>>Administrador</option>
-                                            <option value="Medico"<?php if($registro->usuRol=='Medico') echo 'selected'; ?>>Medico</option>
-                                            <option value="Paciente"<?php if($registro->usuRol=='Paciente') echo 'selected'; ?>>Paciente</option>
-                                            <option value="Auxiliar"<?php if($registro->usuRol=='Auxiliar') echo 'selected'; ?>>Auxiliar</option>
-                                        </select>              
-                                  </div>
-                                
-                                <div>
-                                    <div class="form-group">
-                                      <label class="col-sm-4 control-label"></label>
-                                      <div class="col-sm-5">
-                                        <button type="submit" class="btn btn-primary btn-user btn-block"> Actualizar</button>        
-                                      </div>    
-                                    </div>   
-                                  </div>   
-                                  <input name="idPaciente" type="hidden" value="<?php echo $registro->idUsuario?>">
-                            </form>
-                            <hr>
-                           
+                            </div>
                         </div>
-                    </div>
-
-                    <!-- Agregar Usuario -->
-
+                        <input name="idPaciente" type="hidden" value="<?php echo $registro->idUsuario?>">
+                    </form>
                 </div>
-                <!-- /.container-fluid -->
+                <hr>
 
-            
+            </div>
+        </div>
 
-<?php
+        <!-- Agregar Usuario -->
+
+    </div>
+</div>
+<!-- /.container-fluid -->
+
+
+
+    <?php
 include './footer.php';
   }else {
       echo 'No hay con ese id';

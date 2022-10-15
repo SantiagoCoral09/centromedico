@@ -22,7 +22,7 @@
 
 </head>
 
-<body id="page-top" >
+<body id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -41,7 +41,8 @@
         ?>
         </div>
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column"
+            style="background: url(img/fondo.webp) no-repeat ; background-size: 100%;">
 
             <!-- Main Content -->
             <div id="content">
@@ -70,7 +71,8 @@
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"> Usuario:
                                     <?php echo $_SESSION['user'].'<br>'.$_SESSION['rol'];?>
                                 </span>
-                                <img class="img-profile rounded-circle" src="/centromedico/Vista/img/undraw_profile.svg">
+                                <img class="img-profile rounded-circle"
+                                    src="/centromedico/Vista/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -96,4 +98,3 @@
 
                 </nav>
                 <!-- End of Topbar -->
-

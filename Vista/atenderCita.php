@@ -17,7 +17,7 @@ if (!isset($_SESSION['user']))
 <!-- End of Topbar -->
 
 <!-- Begin Page Content -->
-<div class="card shadow mb-4" style="max-height: 400px; overflow: scroll;">
+<div class="card shadow mb-4" style="max-height: 400px; overflow: scroll; margin: 20px 10px 10px 10px; border-radius: 20px;">
     <div class="card-header py-3">
         <h3 class="m-0 font-weight-bold text-primary" align="center">CITAS SIN ATENDER</h3>
     </div>

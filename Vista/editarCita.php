@@ -22,49 +22,59 @@ $cita=$citas->fetch_object();
 <div class="container-fluid">
 
   <!-- Agregar Usuario -->
-  <div class="container">
-    <div class="text-center">
-      <h1 class="h4 text-gray-900 mb-4">Información de la Cita Registrada</h1>
-    </div>
-    <div class="form-horizontal">
-
-      <form class="user" id="form1" name="form1" action="/centromedico/Controlador/CitaValidarEditar.php?idCita=<?php echo $idCita?>" method="POST">
-
-        <div class="form-group">
-          <label class="col-sm-4 control-label">Información del paciente</label>
-          <input name="paciente" type="text" id="paciente"
-            value="<?php echo $cita->pacNombres." ".$cita->pacApellidos?>"
-            class="form-control form-control-user col-sm-5" disabled>
-        </div>
-        <div class="form-group">
-          <label class="col-sm-4 control-label">Observaciones...</label>
-          <textarea type="text" name="observaciones" id="observaciones" class="form-control col-sm-5" placeholder="Escriba sus Observaciones" required> </textarea>					
-				
-        </div>
-        
-       
-
-
-        <div>
-          <div class="form-group">
-            <label class="col-sm-4 control-label"></label>
-            <div class="col-sm-5">
-              <button type="submit" class="btn btn-primary btn-user btn-block"> Guardar</button>
-            </div>
-          </div>
-        </div>
-        <input name="idCita" type="text" value="<?php echo $idCita?>">
-      </form>
-      <hr>
-
-    </div>
-  </div>
-
   <!-- Agregar Usuario -->
+  <div class="card shadow"
+    style="border-radius: 20px; max-height: 420px; overflow: scroll; margin: 20px 10px 10px 10px;">
 
+    <div class="card-header bg-gradient-primary">
+      <div class="text-center">
+        <h1 class="h4 text-light mb-4">Información de la Cita Registrada</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="card-body">
+        <div class="form-horizontal">
+
+          <form class="user" id="form1" name="form1"
+            action="/centromedico/Controlador/CitaValidarEditar.php?idCita=<?php echo $idCita?>" method="POST">
+
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Información del paciente</label>
+              <input name="paciente" type="text" id="paciente"
+                value="<?php echo $cita->pacNombres." ".$cita->pacApellidos?>"
+                class="form-control form-control-user col-sm-5" disabled>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-4 control-label">Observaciones...</label>
+              <textarea type="text" name="observaciones" id="observaciones" class="form-control col-sm-5"
+                placeholder="Escriba sus Observaciones" required> </textarea>
+
+            </div>
+
+
+
+
+            <div>
+              <div class="form-group">
+                <label class="col-sm-4 control-label"></label>
+                <div class="col-sm-5">
+                  <button type="submit" class="btn btn-primary btn-user btn-block"> Guardar</button>
+                </div>
+              </div>
+            </div>
+            <input name="idCita" type="hidden" value="<?php echo $idCita?>">
+          </form>
+        </div>
+        <hr>
+
+      </div>
+    </div>
+
+    <!-- Agregar Usuario -->
+
+  </div>
+  <!-- /.container-fluid -->
 </div>
-<!-- /.container-fluid -->
-
 
 
 <?php

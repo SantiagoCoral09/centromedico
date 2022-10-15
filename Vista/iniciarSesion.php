@@ -32,7 +32,7 @@
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                                <img src="" alt="" srcset="">
+                                <img src="img/perfil1.jpg" alt="" width="500px">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">

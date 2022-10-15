@@ -6,42 +6,46 @@ if (!isset($_SESSION['user']))
     include 'encabezado.php';
 
 ?>
-                <!-- End of Topbar -->
-<body background="img/fondo.webp">
-  <!-- Begin Page Content -->
-                <div class="container">
+<!-- End of Topbar -->
+<!-- Begin Page Content -->
+<div class="card shadow" style="border-radius: 20px; height: 300px; max-width: 1000px;  margin: 20px 100px 0px 100px;">
+  <!-- Agregar Usuario -->
+  <div class="card-header bg-gradient-primary">
+      <div class="text-center">
+          <h1 class="h4 text-light mb-4">Bienvenido a nuestro Centro Médico</h1>
+      </div>
+  </div>
+<div class="container">
 
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-                    </div>
-                    
+  <!-- Page Heading --><br>
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h3 class="h3 mb-0 text-gray-800 text-center">Puedes acceder a las opciones del menu lateral</h3>
+  </div>
 
 
-                </div>
-                <!-- /.container-fluid -->
-</body>
-                
 
-            
+</div>
+</div>
+<!-- /.container-fluid -->
+
+
+
 
 <?php
 include 'footer.php'; 
 if(isset($msj) and $msj==1){
   ?>
 <script type="text/javascript">
-    alert("El registro se ha guardado correctamente!");
-    window.location.href = '/centromedico/Vista/index2.php';
+  alert("El registro se ha guardado correctamente!");
+  window.location.href = '/centromedico/Vista/index2.php';
 </script>
 <?php
   };
 if(isset($msj) and $msj==2){
   ?>
 <script type="text/javascript">
-    alert("El registro no pudo ser guardado, favor validar!");
-    window.location.href = '/centromedico/Vista/index2.php';
+  alert("El registro no pudo ser guardado, favor validar!");
+  window.location.href = '/centromedico/Vista/index2.php';
 </script>
 <?php
 }

@@ -7,36 +7,38 @@ if (!isset($_SESSION['user']))
 ?>
 
 
-                <!-- End of Topbar -->
+<!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+<!-- Begin Page Content -->
+<div class="card shadow" style="border-radius: 20px; max-height: 420px; overflow: scroll; margin: 20px 10px 10px 10px;">
+    <!-- Agregar Usuario -->
+    <div class="card-header bg-gradient-primary">
+        <div class="text-center">
+            <h1 class="h4 text-light mb-4">Digite el nombre del usuario a Eliminar</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card-body">
+            <div class="form-horizontal">
+                <form id="form1" name="form1" action="" method="POST">
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label">Usuario</label>
+                        <input name="usuario" type="text" id="usuario" class="form-control form-control-user  col-sm-5"
+                            required>
+                    </div>
 
-                    <!-- Agregar Usuario -->
-                    <div class="container">
-                        <h3 class="text-center pt-5">Digite el Nombre del Usuario a Eliminar...</h3>
-                        <hr>
-                        <div class="form-horizontal">
-                            <form id="form1" name="form1" action="" method="POST">
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Usuario</label>
-                                    <input name="usuario" type="text" id="usuario"
-                                        class="form-control form-control-user  col-sm-5" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label"></label>
-                                    <div class="col-sm-5">
-                                        <button type="submit" class="btn btn-dark btn-block">Buscar</button>
-                                    </div>
-                                </div>
-
-                            </form>
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label"></label>
+                        <div class="col-sm-5">
+                            <button type="submit" class="btn btn-dark btn-block">Buscar</button>
                         </div>
                     </div>
-                    <hr>
 
-                    <?php
+                </form>
+            </div>
+            <hr>
+
+            <?php
                         extract ($_POST); 
                         require "../Modelo/conexion.php";
                         require "../Modelo/usuarios.php";
@@ -47,85 +49,85 @@ if (!isset($_SESSION['user']))
                             if (isset($resultado))  
                                 { if($resultado->num_rows >0 ){
                     ?>
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h1 class="m-0 font-weight-bold text-primary" align="center">DATOS DEL USUARIO</h1>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive text-center">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <th class="text-center">Usuario</th>
-                                        <th class="text-center">Password</th>
-                                        <th class="text-center">Estado</th>
-                                        <th class="text-center">Rol</th>
-                                        <th class="text-center">Opción</th>
+            <div class="card-header py-3">
+                <h1 class="m-0 font-weight-bold text-primary" align="center">DATOS DEL USUARIO</h1>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive text-center">
+                    <table class="table table-bordered" width="100%" cellspacing="0">
+                        <thead>
+                            <th class="text-center">Usuario</th>
+                            <th class="text-center">Password</th>
+                            <th class="text-center">Estado</th>
+                            <th class="text-center">Rol</th>
+                            <th class="text-center">Opción</th>
 
-                                    </thead>
-                                    <?php
+                        </thead>
+                        <?php
                             while($registro=$resultado->fetch_object())
                             {
                         ?>
-                                    <tr>
-                                        <td>
-                                            <?php echo $registro->usuLogin?>
-                                        </td>
-                                        <td>
-                                            <?php echo $registro->usuPassword?>
-                                        </td>
-                                        <td>
-                                            <?php echo $registro->usuEstado?>
-                                        </td>
-                                        <td>
-                                            <?php echo $registro->usuRol?>
-                                        </td>
-                                        <td align="center">
-                                            <a href="/centromedico/Vista/borrarUsuario.php?idUsuario=<?php echo $registro->idUsuario?>" title="Clic para Eliminar Usuario">
-                                                <span class="glyphicon glyphicon-edit text-gray-dark class btn btn-warning">
-                                                    <i class="text-gray-dark">Eliminar</i>
-                                                </span>
-                                            </a>
-                                        </td>
+                        <tr>
+                            <td>
+                                <?php echo $registro->usuLogin?>
+                            </td>
+                            <td>
+                                <?php echo $registro->usuPassword?>
+                            </td>
+                            <td>
+                                <?php echo $registro->usuEstado?>
+                            </td>
+                            <td>
+                                <?php echo $registro->usuRol?>
+                            </td>
+                            <td align="center">
+                                <a href="/centromedico/Vista/borrarUsuario.php?idUsuario=<?php echo $registro->idUsuario?>"
+                                    title="Clic para Eliminar Usuario">
+                                    <span class="glyphicon glyphicon-edit text-gray-dark class btn btn-warning">
+                                        <i class="text-gray-dark">Eliminar</i>
+                                    </span>
+                                </a>
+                            </td>
 
 
-                                    </tr>
-                                    <?php
+                        </tr>
+                        <?php
                         }  //cerrando el ciclo while
                         ?>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <?php 
+                    </table>
+                </div>
+
+                <?php 
                         }else{  echo '<div class="alert alert-danger text-center">El Usuario No existe en la base de datos</div>';}
                         }
                         }
                     ?>
-
-                    <?php
+            </div>
+        </div>
+        <?php
 if(isset($msj) && $msj==1){
   ?>
-                    <script type="text/javascript">
-                        alert("EL USUARIO FUE ELIMINADO CORRECTAMENTE");
-                        window.location.href = '/centromedico/Vista/index2.php';
-                    </script>
-                    <?php
+        <script type="text/javascript">
+            alert("EL USUARIO FUE ELIMINADO CORRECTAMENTE");
+            window.location.href = '/centromedico/Vista/index2.php';
+        </script>
+        <?php
 }
 
 if(isset($msj) && $msj==2){
   ?>
-                    <script type="text/javascript">
-                        alert("NO SE PUDO ELIMINAR de manera adecuada");
-                        window.location.href = '/centromedico/Vista/eliminarUsuario.php';
-                    </script>
-                    <?php
+        <script type="text/javascript">
+            alert("NO SE PUDO ELIMINAR de manera adecuada");
+            window.location.href = '/centromedico/Vista/eliminarUsuario.php';
+        </script>
+        <?php
 }
 
 ?>
 
-                    <!-- Agregar Usuario -->
+        <!-- Agregar Usuario -->
 
-                </div>
-                <!-- /.container-fluid -->
+    </div>
+    <!-- /.container-fluid -->
 
-                <?php include './footer.php'; ?>
+    <?php include './footer.php'; ?>

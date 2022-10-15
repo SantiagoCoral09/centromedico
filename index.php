@@ -17,15 +17,15 @@
 	<link rel="stylesheet" href="Vista/css/bootstrap.min.css">
 </head>
 
-<body class="text-center" background="Vista/img/fondo.webp" >
+<body class="text-center" background="Vista/img/fondo.webp" style="background: url(Vista/img/fondo.webp) no-repeat ; background-size: 100%;">
 	<div class="card" style="background-color:rgb(170, 221, 255); border-color:darkblue; border-radius: 50px;  margin: 50px; padding: 50px;">
 		<!-- <img class="card-" src="Vista/img/fondo.webp" alt="Title"> -->
 		<div class="card-header">
-			<h3 class="text-primary">Centro Médico</h3>
+			<h2 class="text-center text-primary">Centro Médico <br> Especializado del Norte</h2>
 		</div>
 		<div class="card-body">
-			<h4 class="card-title">Title</h4>
-			<p class="card-text">Text</p>
+			<h4 class="card-title">Página de Bienvenida</h4>
+			<p class="card-text">Especiaistas en muchos campos, con excelente atención al usuario</p>
 			<a class="btn btn-info" href="Vista/iniciarSesion.php">Ingresar al sistema</a>
 
 		</div>
